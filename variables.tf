@@ -1,14 +1,13 @@
 variable "resources" {
   type        = map(number)
   description = "Count of generated resources."
-  default = {
-    password = 2
-  }
+  default     = {}
 }
 
 variable "password_length" {
   type        = number
   description = "The length of the generated password."
+  default     = 20
 }
 
 variable "use_spatial" {
