@@ -1,3 +1,3 @@
 output "generated_pass" {
-  value = nonsensitive(random_password.password.result)
+  value = [for password in random_password.password[*].result : nonsensitive(password)]
 }

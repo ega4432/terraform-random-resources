@@ -1,9 +1,12 @@
-# variable "count" {
-#   type        = number
-#   description = "Count of generated password."
-# }
+variable "resources" {
+  type        = map(number)
+  description = "Count of generated resources."
+  default = {
+    password = 2
+  }
+}
 
-variable "length" {
+variable "password_length" {
   type        = number
   description = "The length of the generated password."
 }
